@@ -1,0 +1,81 @@
+UI COMPONENTS
+
+User List Section
+	Buttons:
+    	+ New User: Opens a form to add a new user.
+    	Hide Disabled User: Checkbox to toggle the visibility of disabled users in the user list.
+
+	Table Columns:
+    	ID: Unique identifier for each user.
+    	User Name: Display name of the user.
+    	Email: Email address of the user.
+    	Enabled: Status indicating if the user is active (true or false).
+
+	Table Features:
+    	Sorting: Users can sort each column in ascending or descending order.
+    	Filtering: Users can filter data in each column.
+
+New User Form Section
+	Fields:
+	    Username: Input field for the username.
+	    Display Name: Input field for the user's display name.
+	    Phone: Input field for the user's phone number.
+	    Email: Input field for the user's email address.
+	    User Roles: Dropdown menu to select user roles (options: Guest, Admin, SuperAdmin).
+	    Enabled: Checkbox to indicate if the user is enabled.
+	
+	Button:
+	    Save User: Saves the user information entered in the form.
+
+PAGE BEHAVIOR
+	Initial Display
+		- The user list should display all users with the columns: ID, User Name, Email, and Enabled.
+		- The Hide Disabled User checkbox should be unchecked by default, showing all users including disabled ones.
+		- The New User form should be empty when the page first loads.
+
+	Adding a New User
+		- When the + New User button is clicked, the form on the right side should be cleared if it had any data.
+		- The user fills in the required fields and selects appropriate user roles from the dropdown menu.
+		- The Save User button should be enabled once all mandatory fields are filled.
+		- Upon clicking Save User, the new user is added to the user list, and the form is cleared again.
+
+	Editing an Existing User
+		- Clicking on a user in the user list populates the New User form with the user's details.
+		- The form fields can be edited.
+		- Clicking Save User updates the user's details in the user list and clears the form.
+
+	Hiding/Showing Disabled Users
+		- When the Hide Disabled User checkbox is checked, the user list should only display enabled users.
+		- When the checkbox is unchecked, all users (both enabled and disabled) should be displayed.
+
+REQUIREMENTS
+	Functional Requirements
+		- The user list must dynamically update when a new user is added or an existing user is modified.
+		- Sorting and filtering functionalities should be available for each column in the user list.
+		- The Hide Disabled User checkbox should filter the list based on the enabled status of users.
+		- The Save User button should validate that all required fields are filled before enabling.
+
+	Non-Functional Requirements
+		- The interface should be responsive and user-friendly.
+		- It should provide real-time feedback (e.g., loading indicators) during data operations.
+		- The UI should be accessible and follow best practices for accessibility.
+
+Initial User Instructions
+	Viewing Users:
+		- Upon accessing the user management screen, all users are displayed in the table with sorting and filtering options.
+
+	Adding a New User:
+		- Click on the + New User button.
+		- Fill in the required fields in the form on the right.
+		- Select appropriate user roles from the dropdown menu.
+		- Check the Enabled box if the user should be active.
+		- Click Save User to add the user.
+
+	Editing a User:
+		- Click on a user in the list to load their details into the form.
+		- Make the necessary changes.
+		- Click Save User to update the user information.
+
+	Hiding Disabled Users:
+		- Check the Hide Disabled User box to hide users who are not enabled.
+		- Uncheck the box to show all users again.
